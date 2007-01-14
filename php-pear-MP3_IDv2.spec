@@ -5,7 +5,7 @@
 %define		_pearname	MP3_IDv2
 
 Summary:	%{_pearname} - read/write IDv2-Tags
-Summary(pl):	%{_pearname} - odczyt/zapis tagów IDv2 w plikach MP3
+Summary(pl):	%{_pearname} - odczyt/zapis znaczników IDv2 w plikach MP3
 Name:		php-pear-%{_pearname}
 Version:	0.1.1
 Release:	1
@@ -28,8 +28,9 @@ The class offers methods for reading and writing information tags
 In PEAR status of this package is: %{_status}.
 
 %description -l pl
-Klasa ta dostarcza metod do odczytu i zapisu tagów informacyjnych 
-(w wersji drugiej) w plikach MP3 oraz innych plikach w formacie MPEG.
+Klasa ta dostarcza metody do odczytu i zapisu znaczników
+informacyjnych (w wersji drugiej) w plikach MP3 oraz innych plikach w
+formacie MPEG.
 
 Ta klasa ma w PEAR status: %{_status}.
 
