@@ -5,7 +5,7 @@
 %define		_pearname	MP3_IDv2
 
 Summary:	%{_pearname} - read/write IDv2-Tags
-Summary(pl.UTF-8):   %{_pearname} - odczyt/zapis znaczników IDv2 w plikach MP3
+Summary(pl.UTF-8):	%{_pearname} - odczyt/zapis znaczników IDv2 w plikach MP3
 Name:		php-pear-%{_pearname}
 Version:	0.1.1
 Release:	1
