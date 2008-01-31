@@ -8,7 +8,7 @@ Summary:	%{_pearname} - read/write IDv2-Tags
 Summary(pl.UTF-8):	%{_pearname} - odczyt/zapis znaczników IDv2 w plikach MP3
 Name:		php-pear-%{_pearname}
 Version:	0.1.3
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
