@@ -5,18 +5,18 @@
 %define		_pearname	MP3_IDv2
 
 Summary:	%{_pearname} - read/write IDv2-Tags
-Summary(pl):	%{_pearname} - odczyt/zapis tagów IDv2 w plikach MP3
+Summary(pl.UTF-8):	%{_pearname} - odczyt/zapis znacznikÃ³w IDv2 w plikach MP3
 Name:		php-pear-%{_pearname}
-Version:	0.1.1
+Version:	0.1.5
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	dd72cab463dbf0736854a9bc0ca29db0
-Patch0:		%{name}-paths.patch
+# Source0-md5:	3f58dba6dec023c1cda7ac8954e815b2
 URL:		http://pear.php.net/package/MP3_IDv2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,20 +27,23 @@ The class offers methods for reading and writing information tags
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-Klasa ta dostarcza metod do odczytu i zapisu tagów informacyjnych 
-(w wersji drugiej) w plikach MP3 oraz innych plikach w formacie MPEG.
+%description -l pl.UTF-8
+Klasa ta dostarcza metody do odczytu i zapisu znacznikÃ³w
+informacyjnych (w wersji drugiej) w plikach MP3 oraz innych plikach w
+formacie MPEG.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
-%patch0 -p0
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+# don't care for tests
+rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
