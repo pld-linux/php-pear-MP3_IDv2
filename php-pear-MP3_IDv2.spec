@@ -4,12 +4,12 @@
 Summary:	%{pearname} - read/write IDv2-Tags
 Summary(pl.UTF-8):	%{pearname} - odczyt/zapis znaczników IDv2 w plikach MP3
 Name:		php-pear-%{pearname}
-Version:	0.1.7
+Version:	0.1.8
 Release:	1
 License:	LGPL
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
-# Source0-md5:	07b9f01fce17d11441fef254d3a21551
+# Source0-md5:	33f2cedf6031f0a0824e282295a5b144
 URL:		http://pear.php.net/package/MP3_IDv2/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -33,10 +33,6 @@ Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
-
-# messed up dirs
-# https://pear.php.net/bugs/bug.php?id=19590
-mv .%{php_pear_dir}/MP3/MP3/* .%{php_pear_dir}/MP3
 
 %install
 rm -rf $RPM_BUILD_ROOT
