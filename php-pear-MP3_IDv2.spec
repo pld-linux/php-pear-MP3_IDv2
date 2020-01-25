@@ -1,6 +1,5 @@
 %define		status		alpha
 %define		pearname	MP3_IDv2
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - read/write IDv2-Tags
 Summary(pl.UTF-8):	%{pearname} - odczyt/zapis znaczników IDv2 w plikach MP3
 Name:		php-pear-%{pearname}
